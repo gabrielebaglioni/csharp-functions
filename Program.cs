@@ -73,3 +73,28 @@ int sumElmArray(int[] array)
 
     return sum;
 }
+
+
+
+//ESERCIZIO
+int[] baseArr = new[] { 2, 6, 7, 5, 3, 9 };
+//1
+Console.WriteLine("uso la prima funzione");
+stampaArray(baseArr);
+//2
+Console.WriteLine("uso la seconda e la prima funzione");
+int[] newArr = QuadArray(baseArr);
+stampaArray(newArr);
+//3
+Console.WriteLine("uso la terza funzione");
+Console.WriteLine(sumElmArray(baseArr));
+//4
+Console.WriteLine("uso le funzioni insieme");
+int[] newArr2= QuadArray(baseArr);
+Console.WriteLine(sumElmArray(newArr2));
+
+
+
+
+
+
