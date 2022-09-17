@@ -35,6 +35,8 @@
 //}
 
 //1
+using System.Drawing;
+
 void stampaArray(int[] array)
 {
     foreach (int elem in array)
@@ -77,21 +79,61 @@ int sumElmArray(int[] array)
 
 
 //ESERCIZIO
-int[] baseArr = new[] { 2, 6, 7, 5, 3, 9 };
+//int[] baseArr = new[] { 2, 6, 7, 5, 3, 9 };
 //1
-Console.WriteLine("uso la prima funzione");
-stampaArray(baseArr);
+//Console.WriteLine("uso la prima funzione");
+//stampaArray(baseArr);
+//2
+//Console.WriteLine("uso la seconda e la prima funzione");
+//int[] newArr = QuadArray(baseArr);
+//stampaArray(newArr);
+//3
+//Console.WriteLine("uso la terza funzione");
+//Console.WriteLine(sumElmArray(baseArr));
+//4
+//Console.WriteLine("uso le funzioni insieme");
+//int[] newArr2= QuadArray(baseArr);
+//Console.WriteLine(sumElmArray(newArr2));
+
+
+
+//BONUS
+
+
+
+
+int[] makeArray(int lenght)
+{
+    int[] newArray = new int[lenght];
+
+    for (int i = 0; i < lenght; i++)
+    {
+        Console.WriteLine("Inserisci un numero: ");
+        int arrLenght = Convert.ToInt32(Console.ReadLine());
+        newArray[i] = arrLenght;
+        
+    }
+
+    return newArray;
+}
+Console.Write("Quanti numeri vuoi inserire: ");
+int lenght = Convert.ToInt32(Console.ReadLine());
+int[] userArray = makeArray(lenght);
+Console.WriteLine("Stampo l'array");
+//1
+stampaArray(userArray);
 //2
 Console.WriteLine("uso la seconda e la prima funzione");
-int[] newArr = QuadArray(baseArr);
+int[] newArr = QuadArray(userArray);
 stampaArray(newArr);
 //3
 Console.WriteLine("uso la terza funzione");
-Console.WriteLine(sumElmArray(baseArr));
+Console.WriteLine(sumElmArray(userArray));
 //4
 Console.WriteLine("uso le funzioni insieme");
-int[] newArr2= QuadArray(baseArr);
+int[] newArr2 = QuadArray(userArray);
 Console.WriteLine(sumElmArray(newArr2));
+
 
 
 
